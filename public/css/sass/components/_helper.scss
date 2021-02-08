@@ -1,0 +1,57 @@
+a {
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+button:focus {
+  outline: none;
+}
+.color-gray {
+  color: #979797;
+}
+.color-base {
+  color: #161616;
+}
+
+.btn-baseDark {
+  background: $base-dark 0% 0% no-repeat padding-box;
+  border: 1px solid $border-color;
+  color: $white;
+  min-width: 150px;
+  padding: 13px;
+  border-radius: 0;
+  font: normal normal normal 16px/19px "Roboto";
+  display: block;
+  transition: all 0.4s;
+  &:hover {
+    background-color: $white;
+    color: $base-dark;
+  }
+}
+.btn-bordered-gray {
+  min-width: 154px;
+  height: 44px;
+  border: 1px solid #979797;
+  font: normal normal normal 18px/22px "Roboto";
+  letter-spacing: 0;
+  color: #979797;
+  background-color: transparent;
+}
+.btn-baseGrey{
+  background: $base-grey 0% 0% no-repeat padding-box;
+  border: 1px solid $border-color;
+  color: $white;
+  min-width: 150px;
+  padding: 13px;
+  border-radius: 0;
+  font: normal normal normal 16px/19px "Roboto";
+  display: block;
+  transition: all 0.4s;
+  &:hover {
+    background-color: $white;
+    color: $base-dark;
+  }
+}

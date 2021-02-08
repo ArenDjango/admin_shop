@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+/* line 1, ../sass/components/_helper.scss */
+a {
+  text-decoration: none; }
+
+/* line 4, ../sass/components/_helper.scss */
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none; }
+
+/* line 9, ../sass/components/_helper.scss */
+button:focus {
+  outline: none; }
+
+/* line 12, ../sass/components/_helper.scss */
+.color-gray {
+  color: #979797; }
+
+/* line 15, ../sass/components/_helper.scss */
+.color-base {
+  color: #161616; }
+
+/* line 19, ../sass/components/_helper.scss */
+.btn-baseDark {
+  background: #081F2C 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  color: #FFFFFF;
+  min-width: 150px;
+  padding: 13px;
+  border-radius: 0;
+  font: normal normal normal 16px/19px "Roboto";
+  display: block;
+  transition: all 0.4s; }
+  /* line 29, ../sass/components/_helper.scss */
+  .btn-baseDark:hover {
+    background-color: #FFFFFF;
+    color: #081F2C; }
+
+/* line 34, ../sass/components/_helper.scss */
+.btn-bordered-gray {
+  min-width: 154px;
+  height: 44px;
+  border: 1px solid #979797;
+  font: normal normal normal 18px/22px "Roboto";
+  letter-spacing: 0;
+  color: #979797;
+  background-color: transparent; }
+
+/* line 43, ../sass/components/_helper.scss */
+.btn-baseGrey {
+  background: #616161 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  color: #FFFFFF;
+  min-width: 150px;
+  padding: 13px;
+  border-radius: 0;
+  font: normal normal normal 16px/19px "Roboto";
+  display: block;
+  transition: all 0.4s; }
+  /* line 53, ../sass/components/_helper.scss */
+  .btn-baseGrey:hover {
+    background-color: #FFFFFF;
+    color: #081F2C; }
+
+/* line 2, ../sass/components/_checkbox.scss */
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap; }
+
+/* line 15, ../sass/components/_checkbox.scss */
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer; }
+
+/* line 21, ../sass/components/_checkbox.scss */
+.container-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #F6F6F6;
+  border: 1px solid #081F2C; }
+
+/* line 31, ../sass/components/_checkbox.scss */
+.container-checkbox:hover input ~ .checkmark {
+  background-color: #F6F6F6; }
+
+/* line 35, ../sass/components/_checkbox.scss */
+.container-checkbox input:checked ~ .checkmark {
+  background-color: #F6F6F6; }
+
+/* line 39, ../sass/components/_checkbox.scss */
+.container-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* line 45, ../sass/components/_checkbox.scss */
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block; }
+
+/* line 49, ../sass/components/_checkbox.scss */
+.container-checkbox .checkmark:after {
+  left: 9px;
+  top: 4px;
+  width: 6px;
+  height: 12px;
+  border: solid #081F2C;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+/* line 1, ../sass/components/_header.scss */
+header {
+  height: 90px;
+  background-color: #fff;
+  box-shadow: 0 3px 20px #00000029; }
+
+/* line 6, ../sass/components/_header.scss */
+.navigation-wrap > div {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%; }
+
+/* line 3, ../sass/components/_leftMenu.scss */
+@media(min-width: 760px){
+    .left-menu {
+        position: fixed;
+        left: 0;
+        top: 56px;
+    }
+    .dashboard-content{
+        margin-left: 270px;
+    }
+    .burger{
+        display: none;
+        user-select: none;
+        pointer-events: none;
+    }
+}
+@media(max-width: 759px){
+    .tableDiv table{
+        width: 900px;
+    }
+.dashboard-content .form-group {
+    width:98%;
+    padding:0 15px;
+}
+   main  .dashboard-content {
+        padding: 30px 10px;
+    }
+    .left-menu {
+        position: fixed;
+        left: -385px;
+        top: 56px;
+    }
+}
+.open-burger{
+    left: 0 !important;
+    transition: 0.66s;
+}
+
+#navbarDropdown{
+    z-index: 999999;
+    position: relative;
+    background: #fff;
+    width: 100%;
+}
+
+.burger{
+    transition: 0.66s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    /*border-radius: 50%;*/
+    padding: 6px;
+    font-size: 15px;
+}
+.burger i{
+    color: black;
+}
+.left-menu {
+    z-index: 99;
+    height: 100%;
+  background-color: #081F2C;
+  width: 316px;
+  color: #fff;
+  padding: 30px 50px;
+  min-height: calc(100vh - 90px); }
+  /* line 10, ../sass/components/_leftMenu.scss */
+  .left-menu h2 {
+    font: normal normal bold 32px/38px Roboto;
+    color: #FFFFFF;
+    padding-left: 10px; }
+  /* line 15, ../sass/components/_leftMenu.scss */
+  .left-menu a {
+    color: #fff; }
+  /* line 18, ../sass/components/_leftMenu.scss */
+  .left-menu .nav-link {
+    margin-bottom: 8px;
+    text-transform: capitalize; }
+  /* line 22, ../sass/components/_leftMenu.scss */
+  .left-menu .nav-pills .nav-link.active,
+  .left-menu .nav-pills .show > .nav-link {
+    color: #fff;
+    text-decoration: underline;
+    background-color: transparent;
+    margin-bottom: 8px; }
+
+/* line 32, ../sass/components/_leftMenu.scss */
+#product-dropdown {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer; }
+  /* line 38, ../sass/components/_leftMenu.scss */
+  #product-dropdown:after {
+    content: "";
+    background: url(../../img/arrow-down.svg) no-repeat;
+    position: absolute;
+    top: 18px;
+    background-size: 88%;
+    right: 0;
+    height: 22px;
+    width: 21px; }
+
+/* line 50, ../sass/components/_leftMenu.scss */
+.menu {
+  position: relative;
+  display: inline-block; }
+
+/* line 54, ../sass/components/_leftMenu.scss */
+#submenu {
+  display: none;
+  position: relative;
+  min-width: 160px;
+  padding-left: 30px; }
+  /* line 59, ../sass/components/_leftMenu.scss */
+  #submenu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; }
+
+/* line 1, ../sass/components/_dashboard.scss */
+.dashboard-content {
+  background-color: #d1d1d138;
+  padding: 30px 100px;
+    overflow-x: hidden;
+  flex: 1; }
+  /* line 5, ../sass/components/_dashboard.scss */
+  .dashboard-content h2 {
+    font: normal normal bold 32px/38px "Roboto";
+    color: #161616; }
+  /* line 9, ../sass/components/_dashboard.scss */
+  .dashboard-content h3 {
+    font: normal normal bold 20px/38px "Roboto";
+    color: #161616;
+    margin-top: 30px; }
+  /* line 15, ../sass/components/_dashboard.scss */
+  .dashboard-content .table .thead-dark {
+    background-color: #081F2C; }
+    /* line 17, ../sass/components/_dashboard.scss */
+    .dashboard-content .table .thead-dark .row {
+      height: 56px; }
+      /* line 19, ../sass/components/_dashboard.scss */
+      .dashboard-content .table .thead-dark .row .col {
+        font: normal normal medium 16px/21px "Roboto";
+        color: #FFFFFF; }
+  /* line 25, ../sass/components/_dashboard.scss */
+  .dashboard-content .table .col {
+    padding: 5px 30px;
+    text-align: center; }
+  /* line 29, ../sass/components/_dashboard.scss */
+  .dashboard-content .table .tbody .row {
+    background-color: white;
+    box-shadow: 0 0 6px #00000029; }
+    /* line 32, ../sass/components/_dashboard.scss */
+    .dashboard-content .table .tbody .row .col {
+      font: normal normal normal 16px/19px "Roboto";
+      color: #161616; }
+  /* line 37, ../sass/components/_dashboard.scss */
+  .dashboard-content .table .container-checkbox {
+    margin-bottom: 24px; }
+    /* line 39, ../sass/components/_dashboard.scss */
+    .dashboard-content .table .container-checkbox input:checked ~ .checkmark {
+      background-color: transparent; }
+
+/* line 49, ../sass/components/_dashboard.scss */
+.number {
+  display: flex; }
+  /* line 52, ../sass/components/_dashboard.scss */
+  .number input {
+    height: 37px;
+    width: 37px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #979797;
+    display: inline-block;
+    vertical-align: middle;
+    color: #161616; }
+    /* line 62, ../sass/components/_dashboard.scss */
+    .number input:focus {
+      outline: none; }
+  /* line 66, ../sass/components/_dashboard.scss */
+  .number .minus, .number .plus {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    padding: 8px 5px 8px 5px;
+    color: #161616;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer; }
+
+/* line 79, ../sass/components/_dashboard.scss */
+.unit-number {
+  font: normal normal normal 26px/19px "Roboto"; }
+
+/* line 82, ../sass/components/_dashboard.scss */
+.case-item {
+  font: normal normal normal 16px/19px "Roboto"; }
+
+/* line 85, ../sass/components/_dashboard.scss */
+.fa-trash {
+  color: #979797; }
+
+/**users**/
+/* line 90, ../sass/components/_dashboard.scss */
+.user-details {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #00000029;
+  opacity: 1;
+  padding: 13px 30px;
+  margin-bottom: 24px; }
+  /* line 96, ../sass/components/_dashboard.scss */
+  .user-details p {
+    margin: 0; }
+
+/* line 100, ../sass/components/_dashboard.scss */
+.user-icon {
+  height: 55px;
+  width: 55px;
+  background: #D1D1D1;
+  color: #FFFFFF;
+  border-radius: 50%;
+  justify-content: space-around;
+  text-align: center; }
+
+/* line 116, ../sass/components/_dashboard.scss */
+.avatar-upload {
+  position: relative;
+  max-width: 278px;
+  margin: 32px  170px  0 0; }
+  /* line 120, ../sass/components/_dashboard.scss */
+  .avatar-upload .avatar-edit {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    bottom: 48px;
+    height: 54px;
+    background-color: #ECECEC;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center; }
+    /* line 134, ../sass/components/_dashboard.scss */
+    .avatar-upload .avatar-edit input {
+      display: none; }
+      /* line 136, ../sass/components/_dashboard.scss */
+      .avatar-upload .avatar-edit input + label {
+        line-height: 58px;
+        display: inline-block;
+        margin-bottom: 0;
+        border: 1px solid transparent;
+        background: url(../../img/upload-black-icon.svg) no-repeat 2px;
+        cursor: pointer;
+        font-weight: normal;
+        transition: all .2s ease-in-out;
+        padding-left: 20px;
+        transition: all .2s ease-in-out;
+        background-size: 13px;
+        display: flex;
+        align-items: center; }
+  /* line 154, ../sass/components/_dashboard.scss */
+  .avatar-upload .avatar-preview {
+    width: 278px;
+    height: 234px;
+    position: relative;
+    background-color: #fff; }
+    /* line 160, ../sass/components/_dashboard.scss */
+    .avatar-upload .avatar-preview > div {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 0;
+      bottom: 0; }
+
+/* line 177, ../sass/components/_dashboard.scss */
+.description-banner {
+  flex-direction: column;
+  display: flex; }
+  /* line 180, ../sass/components/_dashboard.scss */
+  .description-banner input {
+    height: 44px;
+    border: none; }
+
+/* line 186, ../sass/components/_dashboard.scss */
+.total-row {
+  flex-direction: row-reverse; }
+
+/* line 190, ../sass/components/_dashboard.scss */
+.shipping-container input {
+  border: none;
+  height: 44px; }
+/* line 194, ../sass/components/_dashboard.scss */
+.shipping-container label {
+  color: #161616;
+  font: bold normal normal 16px/19px "Roboto"; }
+/* line 199, ../sass/components/_dashboard.scss */
+.shipping-container h2 {
+  font-size: 20px; }
+
+/* line 203, ../sass/components/_dashboard.scss */
+.liner {
+  border-top: 1px solid #979797; }
+
+/* line 207, ../sass/components/_dashboard.scss */
+.payment-container b {
+  color: #979797; }
+/* line 210, ../sass/components/_dashboard.scss */
+.payment-container p {
+  font-size: 25px; }
+
+/* line 216, ../sass/components/_dashboard.scss */
+.lamp-container textarea {
+  border: none; }
+
+/* line 1, ../sass/components/_loginReg.scss */
+.log-reg-page {
+  background-color: #081F2C;
+  min-height: calc(100vh - 90px); }
+  /* line 4, ../sass/components/_loginReg.scss */
+  .log-reg-page .form-wrapper {
+    background-color: #F6F6F6;
+    max-width: 930px;
+    width: 100%;
+    min-height: 590px; }
+    /* line 9, ../sass/components/_loginReg.scss */
+    .log-reg-page .form-wrapper .title {
+      font: normal normal bold 40px/40px "Roboto";
+      letter-spacing: 2px;
+      color: #081F2C;
+      text-align: center; }
+    /* line 15, ../sass/components/_loginReg.scss */
+    .log-reg-page .form-wrapper form {
+      max-width: 370px;
+      margin: 0 auto; }
+      /* line 18, ../sass/components/_loginReg.scss */
+      .log-reg-page .form-wrapper form label {
+        color: #444444;
+        font: normal normal medium 14px/19px "Roboto"; }
+      /* line 22, ../sass/components/_loginReg.scss */
+      .log-reg-page .form-wrapper form .form-control {
+        border: 0;
+        background-color: #FFFFFF; }
+        /* line 25, ../sass/components/_loginReg.scss */
+        .log-reg-page .form-wrapper form .form-control::placeholder {
+          font: normal normal medium 16px/21px "Roboto";
+          color: #D1D1D1; }
+      /* line 30, ../sass/components/_loginReg.scss */
+      .log-reg-page .form-wrapper form a {
+        font: normal normal normal 14px/17px "Roboto";
+        color: #081F2C; }
+
+/*# sourceMappingURL=main.css.map */
+thead{
+    background:#081F2C;
+    color:#fff;
+}

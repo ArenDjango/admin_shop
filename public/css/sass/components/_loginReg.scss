@@ -1,0 +1,36 @@
+.log-reg-page {
+  background-color: $base-dark;
+  min-height: calc(100vh - 90px);
+  .form-wrapper {
+    background-color: $light-gray;
+    max-width: 930px;
+    width: 100%;
+    min-height: 590px;
+    .title  {
+      font: normal normal bold 40px/40px "Roboto";
+      letter-spacing: 2px;
+      color: $base-dark;
+      text-align: center;
+    }
+    form {
+      max-width: 370px;
+      margin: 0 auto;
+      label {
+        color: $label-color;
+        font: normal normal medium 14px/19px "Roboto";
+      }
+      .form-control {
+        border: 0;
+        background-color: $white;
+        &::placeholder {
+          font: normal normal medium 16px/21px "Roboto";
+          color: $placeholder-color;
+        }
+      }
+      a {
+        font: normal normal normal 14px/17px "Roboto";
+        color: $base-dark;
+      }
+    }
+  }
+}

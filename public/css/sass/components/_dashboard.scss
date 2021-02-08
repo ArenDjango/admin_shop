@@ -1,0 +1,219 @@
+.dashboard-content {
+  background-color: #d1d1d138;
+  padding: 30px 100px;
+  flex: 1;
+  h2 {
+    font: normal normal bold 32px/38px "Roboto";
+    color: #161616;
+  }
+  h3 {
+    font: normal normal bold 20px/38px "Roboto";
+    color: #161616;
+    margin-top:30px;
+  }
+  .table {
+    .thead-dark {
+      background-color: $base-dark;
+      .row {
+        height: 56px;
+        .col {
+          font: normal normal medium 16px/21px "Roboto";
+          color: #FFFFFF;
+        }
+      }
+    }
+    .col {
+      padding: 5px 30px;
+      text-align: center;
+    }
+    .tbody .row {
+      background-color: white;
+      box-shadow: 0 0 6px #00000029;
+      .col {
+        font: normal normal normal 16px/19px "Roboto";
+        color: #161616;
+      }
+    }
+    .container-checkbox {
+      margin-bottom: 24px;
+      input:checked ~ .checkmark {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+
+
+
+.number{
+  display: flex;
+ 
+  input{
+    height:37px;
+    width: 37px;
+    text-align: center;
+    font-size: 16px;
+    border:1px solid #979797;
+    display: inline-block;
+    vertical-align: middle;
+    color: #161616;
+  
+    &:focus{
+      outline: none;
+    } 
+  }
+  .minus, .plus{
+    width:20px;
+    height:20px;
+    border-radius:4px;
+    padding:8px 5px 8px 5px;
+    color: #161616;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.unit-number{
+  font: normal normal normal 26px/19px "Roboto";
+}
+.case-item{
+    font: normal normal normal 16px/19px "Roboto";
+}
+.fa-trash{
+  color: $grey;
+}
+
+/**users**/
+.user-details{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #00000029;
+  opacity: 1;
+  padding: 13px 30px;
+  margin-bottom: 24px;
+  p{
+    margin:0;
+  }
+}
+.user-icon{
+  height: 55px;
+  width: 55px;
+  background: $placeholder-color;
+  color: $white;
+  border-radius: 50%;
+  justify-content: space-around;
+  text-align: center;
+}
+
+
+
+
+
+
+
+  .avatar-upload {
+    position: relative;
+    max-width: 278px;
+    margin:32px  170px  0 0;
+  .avatar-edit {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    bottom:48px;
+    height: 54px;
+    background-color: #ECECEC;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+      input {
+          display: none;
+          + label {
+            line-height: 58px;
+            display: inline-block;
+            margin-bottom: 0;
+            border: 1px solid transparent;
+            background: url(../../img/upload-black-icon.svg) no-repeat 2px;
+            cursor: pointer;
+            font-weight: normal;
+            transition: all .2s ease-in-out;
+            padding-left: 20px;
+            transition: all .2s ease-in-out;
+            background-size: 13px;
+  
+            display: flex;
+            align-items: center;
+      }
+    }
+  }
+  .avatar-preview {
+      width: 278px;
+      height: 234px;
+      position: relative;
+      background-color: #fff;
+    
+      > div {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+      }
+  }
+}
+
+.description-banner{
+    flex-direction: column;
+    display: flex;
+    input{
+      height: 44px;
+      border:none;
+    }
+}
+
+.total-row{
+  flex-direction: row-reverse;
+}
+.shipping-container{
+  input{
+    border: none;
+    height: 44px;
+  }
+  label{
+    color: #161616;
+   
+    font: bold normal normal 16px/19px "Roboto";
+  }
+  h2{
+    font-size:20px;
+  }
+}
+.liner{
+  border-top: 1px solid #979797;
+}
+.payment-container{
+  b{
+    color: $grey;
+  }
+  p{
+    font-size: 25px;
+  }
+}
+
+.lamp-container {
+  textarea{
+    border: none;
+  }
+}
