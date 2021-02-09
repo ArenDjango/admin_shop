@@ -31,6 +31,8 @@ Route::group([
     Route::post('/product/delete', ['as'=>'delete', 'uses'=>'App\Http\Controllers\ProductController@delete']);
 
     Route::post('/add-category', ['as'=>'add_category', 'uses'=>'App\Http\Controllers\CategoryController@addCategory']);
-});
 
+
+});
+Route::get('/forbidden-page', ['as'=>'forbidden', 'uses'=>'App\Http\Controllers\HomeController@firbidden']);
 Auth::routes();
