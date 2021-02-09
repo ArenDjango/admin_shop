@@ -70,13 +70,21 @@
 
             </form></div>
         <div class="d-flex flex-row-reverse">
-            <button onclick="PrintElem('contentBlock');" class="btn-baseDark">Print</button>
+            <button onclick="printSummary();" class="btn-baseDark">Print</button>
         </div>
 
     </div>
 @endsection
 @section('scripts')
     <script>
+
+        function printSummary(){
+            $('.left-menu').hide();
+            $('.dashboard-content').css('margin-left', '0');
+            print();
+            $('.left-menu').show();
+            $('.dashboard-content').css('margin-left', '270px');
+        }
 
         function PrintElem(elem)
         {
