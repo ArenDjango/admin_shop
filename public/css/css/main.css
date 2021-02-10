@@ -163,12 +163,13 @@ header {
     }
     .left-menu {
         position: fixed;
-        left: -385px;
+        left: 0;
+        margin-left: -291px;
         top: 56px;
     }
 }
 .open-burger{
-    left: 0 !important;
+    margin-left: 0 !important;
     transition: 0.66s;
 }
 
