@@ -156,6 +156,7 @@ header {
     }
 .dashboard-content .form-group {
     width:98%;
+    margin-top: 50px !important;
     padding:0 15px;
 }
    main  .dashboard-content {
@@ -166,11 +167,13 @@ header {
         left: 0;
         margin-left: -291px;
         top: 56px;
+        background: none !important;
     }
 }
 .open-burger{
     margin-left: 0 !important;
     transition: 0.66s;
+    background-color: #081F2C !important;
 }
 
 #navbarDropdown{
