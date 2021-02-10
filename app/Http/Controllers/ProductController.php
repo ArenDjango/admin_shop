@@ -20,14 +20,10 @@ class ProductController extends Controller
 
             if($request->has('product_id')){
                 $this->validate($request, [
-                    'title' => 'required|max:200',
-                    'total' => 'required|integer',
                     'description' => 'required|max:900',
                     'category_id' => 'required|integer'
                 ]);
                 $product = Product::findOrFail($request->product_id);
-                $product->title = $request->title;
-                $product->total = $request->total;
                 $product->category_id = $request->category_id;
                 if(auth()->user()->role == 'admin') {
                     $product->user_id = $request->user_id;
@@ -38,6 +34,7 @@ class ProductController extends Controller
                 $product->code = $request->code;
                 $product->srp = $request->srp;
                 $product->cost = $request->cost;
+                $product->qty = $request->qty;
 
 
                 if($request->hasFile('image')){
@@ -57,8 +54,6 @@ class ProductController extends Controller
             }else{
 
                 $this->validate($request, [
-                    'title' => 'required|max:200',
-                    'total' => 'required|integer',
                     'description' => 'required|max:900',
                     'image' => 'required',
                     'category_id' => 'required|integer'
@@ -68,11 +63,10 @@ class ProductController extends Controller
 
 
                 $product->image = 'null';
-                $product->title = $request->title;
                 $product->description = $request->description;
                 $product->code = $request->code;
-                $product->total = $request->total;
                 $product->srp = $request->srp;
+                $product->qty = $request->qty;
                 $product->category_id = $request->category_id;
                 if(auth()->user()->role == 'admin') {
                     $product->user_id = $request->user_id;
@@ -134,7 +128,7 @@ class ProductController extends Controller
     public function changeCount(Request $request)
     {
         Product::where('id', $request->product_id)->update([
-           'total' => $request->total
+           'qty' => $request->qty
         ]);
         return 'OK';
     }

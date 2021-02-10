@@ -75,27 +75,21 @@
                         <label>UPC / Ref</label>
                         <input class="form-control" value="{{ isset($product) ? $product->code : '' }}" name="code" type="text">
                     </div>
-                    <div class="form-group">
-                        <label>Total</label>
-                        <input class="form-control" value="{{ isset($product) ? $product->total : '' }}" name="total" type="number">
-                    </div>
+
+
+                <div class="form-group">
+                    <label>Qty</label>
+                    <input class="form-control" value="{{ isset($product) ? $product->qty : '1' }}" name="qty" type="number">
+                </div>
+
                     <div class="form-group">
                         <label>*SRP</label>
                         <input class="form-control" value="{{ isset($product) ? $product->srp : '' }}" name="srp" type="number">
                     </div>
 
-
-                    <div class="form-group">
-                        <label>Title</label>
-                        <input class="form-control" value="{{ isset($product) ? $product->title : '' }}" name="title" placeholder="Title" />
-                    </div>
-
-
                     <div class="form-group" style="width: 100%">
                         <label>Description</label>
-                        <textarea class="form-control" name="description" rows="3" placeholder="Write here some description about the product">
-                            {{ isset($product) ? $product->description : '' }}
-                        </textarea>
+                        <input name="description" class="form-control" value="{{ isset($product) ? $product->description : '' }}" placeholder="Write here some description about the product" type="text">
                     </div>
 
                     <div class="form-group">

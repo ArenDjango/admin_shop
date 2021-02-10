@@ -28,6 +28,9 @@ class HomeController extends Controller
 
     public function firbidden()
     {
+        if(Auth()->user()->status == 'accepted'){
+            return redirect()->route('menu.dashboard');
+        }
         return view('forbidden');
     }
 }

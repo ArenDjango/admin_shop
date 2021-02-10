@@ -18,7 +18,7 @@ class SiteMiddleware
     public function handle(Request $request, Closure $next)
     {
         if(is_null(auth()->user()->status) || auth()->user()->status == 'rejected'){
-            return redirect()->route('menu.forbidden');
+            return redirect()->route('forbidden');
         }
         $categories = Category::orderBy('created_at', 'DESC')->get();
         View()->share(['categories' => $categories]);

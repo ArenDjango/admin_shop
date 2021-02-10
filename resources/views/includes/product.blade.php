@@ -86,7 +86,7 @@
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->code }}</td>
                     <td>
-                        <img style="width: 60px; height: 60px;"
+                        <img style="max-width: 60px; max-height: 60px; display: block; "
                              src="{{ asset('uploads/products/' . $product->id . '/' . $product->image) }}">
                     </td>
                     <td>{{ $product->description }}</td>
@@ -95,7 +95,7 @@
                     <td>
                         <div class="number">
                             <span class="minus">-</span>
-                            <input class="change_count" type="text" data-product-id="{{ $product->id }}" value="{{ $product->total }}">
+                            <input class="change_count" type="text" data-product-id="{{ $product->id }}" value="{{ $product->qty }}">
                             <span class="plus">+</span>
                         </div>
                     </td>

@@ -49,12 +49,12 @@
                         <td>
                             <div class="number">
                                 <span class="minus">-</span>
-                                <input class="change_count" type="text" data-product-id="{{ $product->id }}" value="{{ $product->total }}">
+                                <input class="change_count" type="text" data-product-id="{{ $product->id }}" value="{{ $product->qty }}">
                                 <span class="plus">+</span>
                             </div>
                         </td>
                         <td>
-                            Total?
+                            0
                         </td>
                         <td>
                             <a style="margin-right: 10px;" href="{{ route('menu.page', $product->id) }}" class="color-base" data-product-id="{{ $product->id }}"> Edit</a>

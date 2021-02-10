@@ -18,12 +18,12 @@ class CreateProductsTable extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->boolean('selected')->default(0);
             $table->bigInteger('category_id')->unsigned();
-            $table->string('title', 255);
             $table->string('code', 155);
             $table->integer('srp')->default(0);
             $table->text('description');
             $table->integer('cost')->default(0);
-            $table->integer('total')->default(0);
+
+            $table->integer('qty')->default(0);
             $table->string('image', 155);
 
             $table->timestamps();
