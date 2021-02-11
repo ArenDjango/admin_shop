@@ -197,15 +197,42 @@ header {
     }
 
     main .dashboard-content {
-        padding: 30px 10px;
+        padding: 30px 15px;
     }
 
     .left-menu {
         position: fixed;
         left: 0;
         margin-left: -291px;
-        top: 56px;
+        top: 90px;
         background: none !important;
+
+    }
+    .avatar-upload .avatar-edit {
+        left: -10px !important;
+        width: 97%;
+    }
+    .lamp-inner{
+        margin:0 auto;
+    }
+    .create-container{
+        margin-right:-5px;
+    }
+    .generic-title{
+        text-align: center;
+    }
+    .avatar-upload {
+        position: relative;
+        width: 100%;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+    .avatar-upload .avatar-preview {
+        width: 97% !important;
+        margin: 0 !important;
+    }
+    .lamp-form{
+        width: 98%;
     }
 }
 

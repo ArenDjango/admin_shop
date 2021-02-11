@@ -4,7 +4,7 @@
 <div class="fade active show" id="contentBlock" role="tabpanel" aria-labelledby="v-pills-SUMMARY-tab">
         <div>
             <div>
-                <h2>Summary</h2>
+                <h2 class="generic-title">Summary</h2>
             </div>
             @foreach($categories as $category)
                 @if(count($category->products))

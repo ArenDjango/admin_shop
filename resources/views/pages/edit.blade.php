@@ -2,7 +2,7 @@
 
 @section('content')
     <div>
-        <h2>{{ isset($product) ? $product->title : 'Add new product' }}</h2>
+        <h2 class="generic-title">{{ isset($product) ? $product->title : 'Add new product' }}</h2>
     </div>
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -19,7 +19,7 @@
             <input type="hidden" name="product_id" value="{{ $product->id }}">
         @endif
 
-        <div class="row">
+        <div class="row create-container">
             <div class="form-group">
 
                 @if(isset($product))

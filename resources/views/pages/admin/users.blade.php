@@ -3,7 +3,7 @@
 @section('content')
     <div>
         <div class="mb-5">
-            <h2>Users</h2>
+            <h2 class="generic-title">Users</h2>
         </div>
         @foreach($users as $user)
             <div class="user-details d-flex align-items-center justify-content-between">
