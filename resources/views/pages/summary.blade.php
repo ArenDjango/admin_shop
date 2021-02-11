@@ -25,17 +25,17 @@
                 <h2 class="mb-5">Client information</h2>
 
                 <div class="row m-0">
-                    <div class="col-lg-4 pl-0">
-                        <div class="form-group">
+                    <div class="col-lg-4 pl-0 pr-0">
+                        <div class="form-group sml-input">
                             <label for="retailerName">Retailer name</label>
                             <input type="text" class="form-control" id="retailerName" placeholder="John Peter">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group sml-input">
                             <label for="retailerEmail">Email</label>
                             <input type="email" class="form-control" id="retailerEmail" placeholder="JohnPeter@gmail.com">
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 pl-0 pr-0">
                         <div class="form-group">
                             <label for="shippingAddress">shipping address</label>
                             <div class="d-flex">
