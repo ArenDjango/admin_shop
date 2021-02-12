@@ -3,7 +3,7 @@
 @section('content')
     <div class="d-flex justify-content-between align-items-center">
         <div class="d-flex lamp-inner">
-            <h2>Lamps</h2>
+            <h2>{{ $category->category_title }}</h2>
             <button class="btn-bordered-gray ml-3" onclick="window.location = '{{ route('menu.page') }}'">+ Create
             </button>
         </div>

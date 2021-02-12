@@ -7,7 +7,7 @@
             <div id="product-dropdown">PRODUCT</div>
             <div id="submenu">
                 @if(Auth::user()->role == 'admin')
-                <a class="nav-link" data-toggle="modal" href="javascript:;" data-target="#addCategory"> - Add category</a>
+                <a class="nav-link" data-toggle="modal" href="javascript:;" data-target="#addCategory"> + Add category</a>
                 @endif
                 @foreach($categories as $category)
                     <a class="nav-link" href="{{ route('menu.category', $category->id) }}" role="tab"

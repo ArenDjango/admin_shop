@@ -10,13 +10,14 @@ use Illuminate\Support\Facades\Auth;
 class CategoryController extends Controller
 {
     public function index(Request $request, $category_id){
+        $category = Category::findOrFail($category_id);
         if(Auth::user()->role == 'admin'){
             $products = Product::where('category_id', $category_id)->get();
         }else{
             $products = Product::where('category_id', $category_id)->where('user_id', auth()->id())->get();
         }
 
-        return view('pages.category', compact('products'));
+        return view('pages.category', compact('products', 'category'));
     }
 
     public function addCategory(Request $request)
