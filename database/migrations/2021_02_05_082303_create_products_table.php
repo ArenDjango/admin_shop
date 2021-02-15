@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->boolean('selected')->default(0);
             $table->bigInteger('category_id')->unsigned();
             $table->string('code', 155);
+            $table->string('hash', 4);
             $table->integer('srp')->default(0);
             $table->text('description');
             $table->integer('cost')->default(0);

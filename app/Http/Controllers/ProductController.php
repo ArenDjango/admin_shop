@@ -32,6 +32,7 @@ class ProductController extends Controller
                 }
                 $product->description = $request->description;
                 $product->code = $request->code;
+                $product->hash = $request->hash;
                 $product->srp = $request->srp;
                 $product->cost = $request->cost;
                 $product->qty = $request->qty;
@@ -60,11 +61,10 @@ class ProductController extends Controller
                 ]);
                 $product = new Product();
 
-
-
                 $product->image = 'null';
                 $product->description = $request->description;
                 $product->code = $request->code;
+                $product->hash = $request->hash;
                 $product->srp = $request->srp;
                 $product->qty = $request->qty;
                 $product->category_id = $request->category_id;
@@ -74,9 +74,6 @@ class ProductController extends Controller
                     $product->user_id = auth()->id();
                 }
                 $product->cost = $request->cost;
-
-
-
 
 
                 $product->save();

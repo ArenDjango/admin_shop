@@ -32,7 +32,7 @@
                 @if(isset($products))
                     @foreach($products as $product)
                         @if($product->selected == 1)
-                            <tr>
+                            <tr class="product-item">
                                 <th>
                                     <label class="container-checkbox">
                                         <input class="select @if($product->selected == 1) selected @endif"
@@ -42,14 +42,14 @@
                                     </label>
                                 </th>
                                 <td>{{ $product->id }}</td>
-                                <td>{{ $product->code }}</td>
+                                <td><p>{{ substr(str_replace(' ', '', $product->code), 0, 6) }} <strong>{{ $product->hash }} </strong>{{ substr($product->code, -1) }}</p></td>
                                 <td>
-                                    <img style="width: 60px; height: 60px;"
+                                    <img style="max-width: 60px; max-height: 60px; display: block"
                                          src="{{ asset('uploads/products/' . $product->id . '/' . $product->image) }}">
                                 </td>
                                 <td>{{ $product->description }}</td>
-                                <td>{{ $product->cost }}</td>
-                                <td>{{ $product->srp }}</td>
+                                <td class="cost">{{ $product->cost }}</td>
+                                <td>${{ $product->srp }}</td>
                                 <td>
                                     <div class="number">
                                         <span class="minus">-</span>
@@ -58,7 +58,7 @@
                                         <span class="plus">+</span>
                                     </div>
                                 </td>
-                                <td>
+                                <td class="total">
                                     0
                                 </td>
                                 <td>

@@ -76,11 +76,13 @@
         $(this).next().on('click', function(){
             changeTotal(this);
         })
+
         function changeTotal($this){
+            console.log($($this).val());
             $.ajax({
                 'url': '{{ route('menu.change_count') }}',
                 'method': 'POST',
-                'data': {'_token': '{{ csrf_token() }}', 'product_id': $($this).attr('data-product-id'), 'total': $($this).val()},
+                'data': {'_token': '{{ csrf_token() }}', 'product_id': $($this).attr('data-product-id'), 'qty': $($this).val()},
                 'success': function(){total();},
                 'error': function(error){console.log(error)}
             });
@@ -112,9 +114,9 @@
             let total = cost * quality;
             console.log('total' + total);
             totalGlobal+= total;
-            $(this).find('.total').text(total);
+            $(this).find('.total').text('$' + total);
         });
-        $('.totalGlobal').text(totalGlobal + ' $')
+        $('.totalGlobal').text('$ ' + totalGlobal)
     }
 
 </script>

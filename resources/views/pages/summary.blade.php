@@ -28,30 +28,23 @@
                     <div class="col-lg-4 pl-0 pr-0">
                         <div class="form-group sml-input">
                             <label for="retailerName">Retailer name</label>
-                            <input type="text" class="form-control" id="retailerName" placeholder="John Peter">
+                            <input type="text" class="form-control" id="retailerName">
                         </div>
                         <div class="form-group sml-input">
                             <label for="retailerEmail">Email</label>
-                            <input type="email" class="form-control" id="retailerEmail" placeholder="JohnPeter@gmail.com">
+                            <input type="email" class="form-control" id="retailerEmail">
                         </div>
                     </div>
                     <div class="col-lg-4 pl-0 pr-0">
                         <div class="form-group">
                             <label for="shippingAddress">shipping address</label>
-                            <div class="d-flex">
-                                <div class="p-0 col-lg-7">
-                                    <input type="text" class="form-control" id="shippingAddress" placeholder="22, Street dr Toronto, Ontario">
-                                </div>
-                                <div class="col-lg-5 pr-0">
-                                    <input type="text" class="form-control" id="shippingAddress2" placeholder="L4P 5W7">
-                                </div>
-                            </div>
+                            <textarea style="width: 100%" class="form-control" rows="5"></textarea>
                         </div>
 
 
                         <div class="form-group">
                             <label for="retailerName">Phone</label>
-                            <input type="number" class="form-control" id="retailerName" placeholder="+91 9876543210">
+                            <input type="text" class="form-control" id="retailerName" placeholder="(xxx) xxx-xxxx">
                         </div>
                     </div>
                     <div class="col-lg-1"></div>

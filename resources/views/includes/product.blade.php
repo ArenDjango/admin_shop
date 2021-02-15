@@ -84,14 +84,14 @@
                         </label>
                     </th>
                     <td>{{ $product->id }}</td>
-                    <td>{{ $product->code }}</td>
+                    <td><p>{{ substr(str_replace(' ', '', $product->code), 0, 6) }} <strong>{{ $product->hash }} </strong>{{ substr($product->code, -1) }}</p></td>
                     <td>
                         <img style="max-width: 60px; max-height: 60px; display: block; "
                              src="{{ asset('uploads/products/' . $product->id . '/' . $product->image) }}">
                     </td>
                     <td>{{ $product->description }}</td>
                     <td class="cost">{{ $product->cost }}</td>
-                    <td>{{ $product->srp }}$</td>
+                    <td>${{ $product->srp }}</td>
                     <td>
                         <div class="number">
                             <span class="minus">-</span>

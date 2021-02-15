@@ -73,23 +73,26 @@
 
                     <div class="form-group">
                         <label>UPC / Ref</label>
-                        <input class="form-control" value="{{ isset($product) ? $product->code : '' }}" name="code" type="text">
+                        <input class="form-control code" required value="{{ isset($product) ? $product->code : '' }}" name="code" type="text">
+                        <br>
+                        <label>#</label>
+                        <input required class="form-control hash" value="{{ isset($product) ? $product->hash : '' }}" name="hash" type="text">
                     </div>
 
 
                 <div class="form-group">
                     <label>Qty</label>
-                    <input class="form-control" value="{{ isset($product) ? $product->qty : '1' }}" name="qty" type="number">
+                    <input class="form-control" required value="{{ isset($product) ? $product->qty : '1' }}" name="qty" type="number">
                 </div>
 
                     <div class="form-group">
                         <label>*SRP</label>
-                        <input class="form-control" value="{{ isset($product) ? $product->srp : '' }}" name="srp" type="number">
+                        <input class="form-control" required value="{{ isset($product) ? $product->srp : '' }}" name="srp" type="number">
                     </div>
 
                     <div class="form-group" style="width: 100%">
                         <label>Description</label>
-                        <input name="description" class="form-control" value="{{ isset($product) ? $product->description : '' }}" placeholder="Write here some description about the product" type="text">
+                        <input name="description" required class="form-control" value="{{ isset($product) ? $product->description : '' }}" placeholder="Write here some description about the product" type="text">
                     </div>
 
                     <div class="form-group">
@@ -102,4 +105,15 @@
             </div>
         </div>
     </form>
+@endsection
+@section('scripts')
+    <script>
+        $('.code').on('input', function(){
+            console.log('dsf');
+            let val = $(this).val().replace(/\s/g, '');
+            let last_char = val.substr(val.length - 1);
+            let hash = val.substr(val.length - 5).slice(0, -1);
+           $('.hash').val(hash);
+        });
+    </script>
 @endsection
