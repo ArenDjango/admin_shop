@@ -41,7 +41,7 @@
                                         <span class="checkmark"></span>
                                     </label>
                                 </th>
-                                <td>{{ $product->id }}</td>
+                                <td>{{ $product->hash }}</td>
                                 <td><p>{{ substr(str_replace(' ', '', $product->code), 0, 6) }} <strong>{{ $product->hash }} </strong>{{ substr($product->code, -1) }}</p></td>
                                 <td>
                                     <img style="max-width: 60px; max-height: 60px; display: block"
