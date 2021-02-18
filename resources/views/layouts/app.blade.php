@@ -78,7 +78,6 @@
         })
 
         function changeTotal($this){
-            console.log($($this).val());
             $.ajax({
                 'url': '{{ route('menu.change_count') }}',
                 'method': 'POST',
@@ -96,7 +95,6 @@
             'method': 'POST',
             data: {_token: '{{ csrf_token() }}', 'id': $($this).attr('data-id-checkbox')},
             success: function(data){
-                console.log(data);
                 @if(Route::currentRouteName() == 'menu.category')
                     window.location = window.location.href;
                 @endif
@@ -109,9 +107,10 @@
     function total(){
         let totalGlobal = 0;
         $('.product-item').each(function(){
-            let cost = parseInt($(this).find('.cost').text());
-            let quality = parseInt($(this).find('.change_count').val());
+            let cost = parseFloat($(this).find('.cost').text());
+            let quality = parseFloat($(this).find('.change_count').val());
             let total = cost * quality;
+            console.log(cost);
             console.log('total' + total);
             totalGlobal+= total;
             $(this).find('.total').text('$' + total);

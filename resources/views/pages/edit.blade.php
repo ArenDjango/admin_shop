@@ -87,7 +87,8 @@
 
                     <div class="form-group">
                         <label>*SRP</label>
-                        <input class="form-control" required value="{{ isset($product) ? $product->srp : '' }}" name="srp" type="number">
+                        <input class="form-control" required value="{{ isset($product) ? $product->srp : '' }}"
+                               name="srp" type="text">
                     </div>
 
                     <div class="form-group" style="width: 100%">
@@ -97,7 +98,7 @@
 
                     <div class="form-group">
                         <label>Cost</label>
-                        <input required class="form-control" name="cost" value="{{ isset($product) ? $product->cost : '' }}" type="number">
+                        <input required class="form-control" name="cost" value="{{ isset($product) ? $product->cost : '' }}" type="text">
                     </div>
                 <div class="d-flex flex-row-reverse">
                     <button class="btn-baseDark">Save</button>
