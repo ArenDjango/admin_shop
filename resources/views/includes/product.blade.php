@@ -69,6 +69,7 @@
             <th scope="col">*SRP</th>
             <th scope="col">Qty</th>
             <th scope="col">Total</th>
+            <th scope="col">Size</th>
             <th scope="col">Actions</th>
         </tr>
         </thead>
@@ -101,6 +102,9 @@
                     </td>
                     <td class="total">
                         0
+                    </td>
+                    <td>
+                        {{ $product->size }}
                     </td>
                     <td>
                         <a style="margin-right: 10px;" href="{{ route('menu.page', $product->id) }}" class="color-base" data-product-id="{{ $product->id }}"> Edit</a>

@@ -34,6 +34,7 @@ class ProductController extends Controller
                 $product->code = $request->code;
                 $product->hash = $request->hash;
                 $product->srp = $request->srp;
+                $product->size = $request->size;
                 $product->cost = $request->cost;
                 $product->qty = $request->qty;
 
@@ -66,6 +67,7 @@ class ProductController extends Controller
                 $product->code = $request->code;
                 $product->hash = $request->hash;
                 $product->srp = $request->srp;
+                $product->size = $request->size;
                 $product->qty = $request->qty;
                 $product->category_id = $request->category_id;
                 if(auth()->user()->role == 'admin') {
