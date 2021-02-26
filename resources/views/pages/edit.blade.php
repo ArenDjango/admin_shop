@@ -73,7 +73,7 @@
 
                     <div class="form-group">
                         <label>Size</label>
-                        <input class="form-control code" required value="{{ isset($product) ? $product->size : '' }}" name="size" type="text">
+                        <input class="form-control size" required value="{{ isset($product) ? $product->size : '' }}" name="size" type="text">
                         <br>
                         <label>UPC / Ref</label>
                         <input class="form-control code" required value="{{ isset($product) ? $product->code : '' }}" name="code" type="text">
