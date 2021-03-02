@@ -59,7 +59,7 @@
 <div class="tableDiv" style="max-width: 100%; width: 100%; overflow-x: auto !important;">
     <table class="table">
         <thead>
-        <tr>
+        <tr class="tr">
             <th scope="col">Select</th>
             <th scope="col">#</th>
             <th scope="col">UPC / Ref</th>

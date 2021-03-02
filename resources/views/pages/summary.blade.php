@@ -74,9 +74,11 @@
         function printSummary(){
             $('.left-menu').hide();
             $('.dashboard-content').css('margin-left', '0');
+            $('.tr').css('color', 'black');
             print();
             $('.left-menu').show();
             $('.dashboard-content').css('margin-left', '270px');
+            $('.tr').css('color', '#fff');
         }
 
         function PrintElem(elem)
